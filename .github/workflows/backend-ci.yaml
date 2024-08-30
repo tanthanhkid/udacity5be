@@ -74,11 +74,5 @@ jobs:
       # Check the running application.
       - run: curl http://localhost:5000/movies
 
-      # Review logs.
-      - run: docker logs -f mp-backend
-
-      # Stop the application.
-      - run: docker stop mp-backend
-
       # Send a console message at completion.
       - run: echo "Hello ${{ github.actor }}. Your CI/CD pipeline ran successfully for ${{ github.repository }} at $(date)."
